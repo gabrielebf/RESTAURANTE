@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Restaurante.CAMADAS.MODEL
 {
-    class Categoria
+    public class Categoria
     {
         public int id { get; set; }
         public string categoria { get; set; }

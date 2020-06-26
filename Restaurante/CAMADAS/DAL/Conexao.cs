@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Restaurante.CAMADAS.DAL
 {
-    public Conexao
+    public class Conexao
     {
         public static string getConexao()
         {

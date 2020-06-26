@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace Restaurante.CAMADAS.MODEL
 {
-    class CadastroProd
+    public class CadastroProd
     {
         public int id { get; set; }
         public string tipo { get; set; }
-        public float MyProperty { get; set; }
+        public float preco { get; set; }
         public float desconto { get; set; }
-        public float ano { get; set; }
-        public float observacao { get; set; }
+        public string observacao { get; set; }
+        public int categoriaId { get; set; }
 
     }
 }
