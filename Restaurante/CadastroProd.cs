@@ -71,7 +71,7 @@ namespace Restaurante
         {
             txtTipo.Enabled = status;
             txtValor.Enabled = status;
-            txtDesconto.Enabled = status;
+            //txtDesconto.Enabled = status;
             txtObs.Enabled = status;
             //cmbCategoria.Enabled = status;
         }
@@ -88,10 +88,10 @@ namespace Restaurante
         private void limparControle()
         {
             lblID.Text = "0";
-            txtTipo.Text = string.Empty;
-            txtValor.Text = null;
-            txtDesconto.Text = null;
-            txtObs.Text = null;
+            txtTipo.Text = "";
+            txtValor.Text = "";
+            //txtDesconto.Text = null;
+            txtObs.Text = "";
             
         }
 
@@ -161,7 +161,7 @@ namespace Restaurante
                 cadastroProd.id = Convert.ToInt32(lblID.Text);
                 cadastroProd.tipo = txtTipo.Text;
                 cadastroProd.preco = Convert.ToSingle(txtValor.Text);
-                cadastroProd.desconto = Convert.ToSingle(txtDesconto.Text);
+                //cadastroProd.desconto = Convert.ToSingle(txtDesconto.Text);
                 cadastroProd.observacao = txtObs.Text;
                 //cadastroProd.categoriaId = Convert.ToInt32(cmbCategoria.SelectedValue);
                 bllCadP.Insert(cadastroProd);

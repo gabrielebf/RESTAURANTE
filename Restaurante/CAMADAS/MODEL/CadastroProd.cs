@@ -13,7 +13,7 @@ namespace Restaurante.CAMADAS.MODEL
         public int id { get; set; }
         public string tipo { get; set; }
         public float preco { get; set; }
-        public float desconto { get; set; }
+        //public float desconto { get; set; }
         public string observacao { get; set; }
         public int categoriaId { get; set; }
 

@@ -31,7 +31,7 @@ namespace Restaurante.CAMADAS.DAL
                     cadastroProd.id = Convert.ToInt32(dados["id"].ToString());
                     cadastroProd.tipo = dados["tipo"].ToString();
                     cadastroProd.preco = Convert.ToSingle(dados["preco"].ToString());
-                    cadastroProd.desconto = Convert.ToSingle(dados["desconto"].ToString());
+                    //cadastroProd.desconto = Convert.ToSingle(dados["desconto"].ToString());
                     cadastroProd.observacao = dados["observacao"].ToString();
                     cadastroProd.categoriaId = Convert.ToInt32(dados["categoriaId"].ToString());
 
@@ -65,7 +65,7 @@ namespace Restaurante.CAMADAS.DAL
                     cadastroProd.id = Convert.ToInt32(dados["id"].ToString());
                     cadastroProd.tipo = dados["tipo"].ToString();
                     cadastroProd.preco = Convert.ToSingle(dados["preco"].ToString());
-                    cadastroProd.desconto = Convert.ToSingle(dados["desconto"].ToString());
+                    //cadastroProd.desconto = Convert.ToSingle(dados["desconto"].ToString());
                     cadastroProd.observacao = dados["observacao"].ToString();
                     cadastroProd.categoriaId = Convert.ToInt32(dados["categoriaId"].ToString());
                 }
@@ -97,7 +97,7 @@ namespace Restaurante.CAMADAS.DAL
                     cadastroProd.id = Convert.ToInt32(dados["id"].ToString());
                     cadastroProd.tipo = dados["tipo"].ToString();
                     cadastroProd.preco = Convert.ToSingle(dados["preco"].ToString());
-                    cadastroProd.desconto = Convert.ToSingle(dados["desconto"].ToString());
+                    //cadastroProd.desconto = Convert.ToSingle(dados["desconto"].ToString());
                     cadastroProd.observacao = dados["observacao"].ToString();
                     cadastroProd.categoriaId = Convert.ToInt32(dados["categoriaId"].ToString());
                 }
@@ -119,11 +119,11 @@ namespace Restaurante.CAMADAS.DAL
         public void Insert(MODEL.CadastroProd cadastroProd)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "INSERT INTO RestCadastroProd VALUES (@tipo, @preco, @desconto, @observacao);";
+            string sql = "INSERT INTO RestCadastroProd VALUES (@tipo, @preco, @observacao);";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@tipo", cadastroProd.tipo);
             cmd.Parameters.AddWithValue("@preco", cadastroProd.preco);
-            cmd.Parameters.AddWithValue("@desconto", cadastroProd.desconto);
+            //cmd.Parameters.AddWithValue("@desconto", cadastroProd.desconto);
             cmd.Parameters.AddWithValue("@observacao", cadastroProd.observacao);
 
 
@@ -145,13 +145,13 @@ namespace Restaurante.CAMADAS.DAL
         public void Update(MODEL.CadastroProd cadastroProd)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "UPDATE RestCadastroProd SET tipo=@tipo, preco=@preco, desconto=@desconto, observacao=@observacao";
+            string sql = "UPDATE RestCadastroProd SET tipo=@tipo, preco=@preco, observacao=@observacao";
             sql += " WHERE id=@id";
 
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@tipo", cadastroProd.tipo);
             cmd.Parameters.AddWithValue("@preco", cadastroProd.preco);
-            cmd.Parameters.AddWithValue("@desconto", cadastroProd.desconto);
+            //cmd.Parameters.AddWithValue("@desconto", cadastroProd.desconto);
             cmd.Parameters.AddWithValue("@observacao", cadastroProd.observacao);
 
 
